@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Gloria+Hallelujah');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10px;
+    float: center;
+    border: 1px solid lightblue;
+/*    font-family: "Shadows Into Light"*/
+    font-family: "Gloria Hallelujah";
+}
+
+h1 {
+    width: 100%;
+    line-height: 30px;
+    padding: 10px 0px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    margin: 0 auto;
+    /*gorny, prawy, dol, lewy*/
+    padding: 0px 0px 10px 0px;
+    color: #74bed6;
+    font-size: 20px;
+    text-align: center;
+}
+
