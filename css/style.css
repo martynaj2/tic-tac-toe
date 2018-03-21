@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: #33324a00;
 }
 
 header {
@@ -15,6 +16,11 @@ header {
     border: 1px solid lightblue;
 /*    font-family: "Shadows Into Light"*/
     font-family: "Gloria Hallelujah";
+    transition: all .1s ease-in-out;
+}
+
+header:hover {
+    border: 3px solid lightblue;
 }
 
 h1 {
@@ -40,8 +46,8 @@ h2 {
 
 td {
     border: 2px solid red;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -51,8 +57,9 @@ table {
     border-collapse: collapse;
     position: absolute;
     left: 50%;
-    margin-left: -155px;
-    top: 40%;
+    margin-left: -185px;
+    top: 30%;
+    margin-bottom: 40px;
 }
 
 table tr:first-child td{
