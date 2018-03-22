@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #33324a00;
+    background-color: #2d2a350d;
 }
 
 header {
@@ -45,12 +45,53 @@ h2 {
 
 
 td {
-    border: 2px solid red;
+    border: 0.5px solid black;
     height: 120px;
     width: 120px;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    transition: all .5s ease;
+}
+
+td {
+    background-color: #3a0eb105;
+}
+
+td[id="0"]:hover{
+    background-color: #ffc0cb3b;
+}
+
+td[id="1"]:hover{
+    background-color: #ffc0cb69;
+}
+
+td[id="2"]:hover{
+    background-color: #ffc0cb94;
+}
+
+td[id="3"]:hover{
+    background-color: lightblue;
+}
+
+td[id="4"]:hover{
+    background-color: #add8e67d;
+}
+
+td[id="5"]:hover{
+    background-color: #add8e638;
+}
+
+td[id="6"]:hover{
+    background-color: #bb66916b;
+}
+
+td[id="7"]:hover{
+    background-color: #bb66919e;
+}
+
+td[id="8"]:hover{
+    background-color: #bb6691c9;
 }
 
 table {
