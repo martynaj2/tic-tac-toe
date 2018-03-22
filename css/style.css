@@ -14,7 +14,6 @@ header {
     margin-top: 10px;
     float: center;
     border: 1px solid lightblue;
-/*    font-family: "Shadows Into Light"*/
     font-family: "Gloria Hallelujah";
     transition: all .1s ease-in-out;
 }
@@ -52,6 +51,8 @@ td {
     vertical-align: middle;
     cursor: pointer;
     transition: all .5s ease;
+    font-family: "Gloria Hallelujah";
+    font-size: 60px;
 }
 
 td {
