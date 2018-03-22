@@ -1,40 +1,28 @@
-/*
-var player_X = 1;
-//var square = document.getElementById('0');
-
-
-function display(cell) {
-    var square = document.getElementsByClassName("cell")[0];
-   
-    if(square.innerHTML !="") return;
-    
-    if ( player_X == 1){
-        square.innerHTML = "X";
-        player_X = 0;
-    } else {
-        square.innerHTML = "O";
-        player_X = 1;
-    }
+var something = document.getElementsByClassName('cell');
+for (var i=0; i<something.length; i++){
+    something[i].addEventListener('click', put_xy);
 }
-*/
 
-
-var something = document.getElementsByClassName('cell')[0];
-/*for (var i=0; i<something.length; i++){
-    
-}*/
-/*var something = document.querySelectorAll(".cell");*/
 var player_x = 1;
-something.addEventListener('click', put_xy);
 
-function put_xy() {
-    if (something.innerHTML !== "") return;
+function put_xy(event) {
+   //console.log(23232);
+    //ert(event.target.id);
+    var square = document.getElementById(event.target.id);
     if (player_x == 1) {
-        something.innerHTML = "X";
+        square.classList.remove('playero');
+        square.classList.add('playerx');
+        square.innerHTML = "X";
         player_x = 0;
     }
     else {
-        something.innerHTML = "0";
+        square.classList.remove('playerx');
+        square.classList.add('playero');
+        square.innerHTML = "O";
         player_x = 1;
     }
+     
 }
+
+
+
