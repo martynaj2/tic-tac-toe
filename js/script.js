@@ -19,7 +19,7 @@ function display(cell) {
 */
 
 
-var something = document.getElementsByClassName('cell')[3];
+var something = document.getElementsByClassName('cell')[0];
 /*for (var i=0; i<something.length; i++){
     
 }*/
