@@ -1,3 +1,4 @@
+/* eslint-env browser */
 var something = document.getElementsByClassName('cell');
 
 for (var i=0; i<something.length; i++){
