@@ -118,15 +118,17 @@ td {
 
 
 #resetBtn {
-    width: 150px;
+    width: 20vh;
+    height:6vh;
     color: black;
     background-color: lightblue;
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5vh;
+    padding-top: 0px;
+    margin-bottom: 10vh;
     transition: all .3s ease-in-out;
 }
 
