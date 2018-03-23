@@ -12,11 +12,12 @@ body {
 header {
     width: 100%;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 10px;
     float: center;
     /*border-bottom: 1px solid lightblue;*/
     font-family: "Gloria Hallelujah";
     transition: all .1s ease-in-out;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -31,15 +32,25 @@ h1 {
     text-align: center;
 }
 
-h2 {
+
+#currentplayer {
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 3.5vmin;
+    color:#74bed6;
+}
+
+
+/*h2 {
     width: 100%;
     margin: 0 auto;
-    /*gorny, prawy, dol, lewy*/
+    gorny, prawy, dol, lewy
     padding: 0px 0px 10px 0px;
     color: #74bed6;
     font-size: 3.0vmin;
     text-align: center;
-}
+}*/
 
 .game {
     margin: 0 auto;
