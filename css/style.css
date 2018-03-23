@@ -2,30 +2,32 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers|Gloria+Hallelujah');
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 100%;
+    width: 90vw;
     background-color: #2d2a350d;
     font-family: "Gloria Hallelujah";
 }
 
 header {
-    width: 30%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 5px;
     float: center;
-    border-bottom: 1px solid lightblue;
+    /*border-bottom: 1px solid lightblue;*/
     font-family: "Gloria Hallelujah";
     transition: all .1s ease-in-out;
 }
 
 h1 {
+  
     width: 100%;
-    line-height: 30px;
+    margin: 0 auto;
+    /*line-height: 20px;*/
     padding: 10px 0px 0px 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 30px;
+    font-size: 5vmin;
     text-align: center;
 }
 
@@ -35,7 +37,7 @@ h2 {
     /*gorny, prawy, dol, lewy*/
     padding: 0px 0px 10px 0px;
     color: #74bed6;
-    font-size: 20px;
+    font-size: 3.0vmin;
     text-align: center;
 }
 
@@ -45,20 +47,25 @@ h2 {
 
 td {
     border: 0.5px solid black;
-    height: 120px;
-    width: 120px;
+   /* height: 120px;
+    width: 120px;*/
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     transition: all .5s ease;
     font-family: "Gloria Hallelujah";
-    font-size: 60px;
+    font-size: 8.0vmin;
+
+    
 }
 
 td {
     background-color: #3a0eb105;
     border-radius: 30px;
     box-shadow: 5px 4px 10px 1px #25171754;
+    width: 19vmin;
+    height: 19vmin;
+
 }
 
 
@@ -104,13 +111,8 @@ td[id="8"]{
 table {
     margin: 0 auto;
     border-spacing: 10px;
-    margin-top: 20px;
 }
 
-td {
-    width: 18vh;
-    height: 18vh;
-}
 
 .cell {
     border: none;
@@ -118,17 +120,17 @@ td {
 
 
 #resetBtn {
-    width: 20vh;
-    height:6vh;
+    width: 20vmin;
+    height:6vmin;
     color: black;
     background-color: lightblue;
-    font-size: 20px;
+    font-size: 3vmin;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
     margin-top: 5vh;
     padding-top: 0px;
-    margin-bottom: 10vh;
+    margin-bottom: 2px;
     transition: all .3s ease-in-out;
 }
 
@@ -146,9 +148,9 @@ td {
     color: #444;
 }
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
     body {
-        width: 50vh;
-        height: 50vh;
+        width: 100%;
+        height: 100%;
     }
-}
+}*/
