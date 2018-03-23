@@ -1,12 +1,14 @@
 /* eslint-env browser */
-var something = document.getElementsByClassName('cell');
 var player_x = 1;
 var display = document.querySelector("#currentplayer");
 display.innerHTML = "Good luck!"; 
 
-for (var i = 0; i < something.length; i++) {
-    something[i].addEventListener('click', put_xy);
+
+var data = document.getElementsByClassName('cell');
+for (var i = 0; i < data.length; i++) {
+    data[i].addEventListener('click', put_xy);
 }
+
 
 function put_xy(event) {
     var square = document.getElementById(event.target.id);  
@@ -32,9 +34,24 @@ reset.addEventListener('click',resetgame);
 
 
 function resetgame() {
-    for (var i=0; i<something.length; i++){
-    something[i].innerHTML="";    
+    for (var i=0; i<data.length; i++){
+    data[i].innerHTML="";    
     }
     display.innerHTML = "Let's play again! Player X starts.";
     player_x =1 ;
 }
+
+
+var tablerow = document.getElementsbyClassName('row');
+function endgame() {
+    for (var r = 0; r < tablerow.length; r++){
+     if (tablerow[0] && tablerow[1] && tablerow[2]){
+         for (var i = 0; i < data.length; i++) {
+         data[i].innerHTML = "X"
+            }
+        }
+
+    }
+    alert("X won!");
+}
+
