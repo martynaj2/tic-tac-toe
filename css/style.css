@@ -138,6 +138,25 @@ table {
     transition: all .3s ease-in-out;
 }
 
+
+#icon {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+#moon {
+      -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+#moon:hover {
+    cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+
 #resetBtn:hover, .reserBtn:focus {
     transform: scale(1.2);
     cursor: pointer;
@@ -150,4 +169,8 @@ table {
 
 .playero {
     color: #444;
+}
+
+.blacktheme {
+    background-color: black;
 }

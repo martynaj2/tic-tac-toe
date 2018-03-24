@@ -1,7 +1,7 @@
 /* eslint-env browser */
 var player_x = 1;
 var display = document.querySelector("#currentplayer");
-display.innerHTML = "Good luck!"; 
+display.innerHTML = "Good luck!";
 
 
 var data = document.getElementsByClassName('cell');
@@ -35,23 +35,16 @@ reset.addEventListener('click',resetgame);
 
 function resetgame() {
     for (var i=0; i<data.length; i++){
-    data[i].innerHTML="";    
+    data[i].innerHTML=""; 
     }
     display.innerHTML = "Let's play again! Player X starts.";
     player_x =1 ;
 }
 
+var theme = document.getElementById("moon");
+theme.addEventListener('click',changeTheme);
 
-var tablerow = document.getElementsbyClassName('row');
-function endgame() {
-    for (var r = 0; r < tablerow.length; r++){
-     if (tablerow[0] && tablerow[1] && tablerow[2]){
-         for (var i = 0; i < data.length; i++) {
-         data[i].innerHTML = "X"
-            }
-        }
-
-    }
-    alert("X won!");
+function changeTheme() {
+    $("body").css("background-color", "#373d52a1");
 }
 
