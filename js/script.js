@@ -10,6 +10,7 @@ for (var i = 0; i < data.length; i++) {
 }
 
 
+// main game function
 function put_xy(event) {
     var square = document.getElementById(event.target.id);  
     if (square.innerHTML != "") return;
@@ -32,7 +33,7 @@ function put_xy(event) {
 var reset = document.getElementById("resetBtn");
 reset.addEventListener('click',resetgame);
 
-
+// reseting board
 function resetgame() {
     for (var i=0; i<data.length; i++){
     data[i].innerHTML=""; 
@@ -44,7 +45,35 @@ function resetgame() {
 var theme = document.getElementById("moon");
 theme.addEventListener('click',changeTheme);
 
+
+// change theme button
+var theme_name="light";
+
 function changeTheme() {
+    if(theme_name == "light") {
+    theme_name = "dark";
     $("body").css("background-color", "#373d52a1");
+    }
+    else {
+    theme_name = "light";
+    $("body").css("background-color","#2d2a350d")
+     }
 }
+
+
+// showing winner
+/*var proba = document.getElementsByClassName('cell');*/
+
+function endgame(){
+    console.log("dada"); 
+}
+
+
+var dupa = document.getElementsByClassName('cell');
+for (var d = 0; d < dupa.length; d++) {
+    if (dupa[d].innerHTML=="X"){
+        endgame();
+    }
+}
+
 

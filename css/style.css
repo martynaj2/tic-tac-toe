@@ -143,13 +143,13 @@ table {
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
-
 }
 
 #moon {
       -webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
 }
+
 #moon:hover {
     cursor: pointer;
     -webkit-filter: grayscale(0%);
@@ -171,6 +171,3 @@ table {
     color: #444;
 }
 
-.blacktheme {
-    background-color: black;
-}
