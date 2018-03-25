@@ -30,12 +30,14 @@ for (var i = 0; i < data.length; i++) {
 }
 
 var filledcells = 0;
+var isfinished = false;
 
 // main game function
 function put_xy(event) {
     var x = event.target.id;
     var square = document.getElementById(x);  
     if (square.innerHTML != "") return;
+    if (isfinished != false) return;
         if (player_x == 1) {
             square.classList.remove('playero');
             square.classList.add('playerx');
@@ -52,18 +54,22 @@ function put_xy(event) {
             display.innerHTML = "It's player X turn";
             filledcells += 1;
         }   
+    
         if (endgame("X") == true) {
             message.innerHTML = "X won!"
             modal.style.display = 'block';
+            isfinished = true;
            
         }
         else if (endgame("O") == true) {
             message.innerHTML = "O won!";
             modal.style.display = 'block';
+            isfinished = true;
         }
         else if (endgame("O") == false && endgame("X") == false && filledcells == 9) {
             message.innerHTML = "Oh no! Draw!";
             modal.style.display = 'block';
+            isfinished = true;
         }
     }
 
@@ -79,6 +85,7 @@ function resetgame() {
     player_x = 1 ;
     message.innerHTML = "";
     filledcells = 0;
+    isfinished = false;
 }
 
 var theme = document.getElementById("moon");
