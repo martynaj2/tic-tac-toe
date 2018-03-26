@@ -3,9 +3,16 @@ var player_x = 1;
 
 // modal 
 var modal = document.getElementById('simpleModal');
+var message = document.querySelector("#alert");
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', clickOutside);
+// message with current player
+var display = document.querySelector("#currentplayer");
+display.innerHTML = "Good luck!";
+var filledcells = 0;
+var isfinished = false;
+
 
 // functions to close modal
 function closeModal() {
@@ -18,19 +25,6 @@ function clickOutside(e) {
     }
 }
 
-var display = document.querySelector("#currentplayer");
-display.innerHTML = "Good luck!";
-
-var message = document.querySelector("#alert");
-
-
-var data = document.getElementsByClassName('cell');
-for (var i = 0; i < data.length; i++) {
-    data[i].addEventListener('click', put_xy);
-}
-
-var filledcells = 0;
-var isfinished = false;
 
 // main game function
 function put_xy(event) {
@@ -72,6 +66,12 @@ function put_xy(event) {
             isfinished = true;
         }
     }
+
+var data = document.getElementsByClassName('cell');
+for (var i = 0; i < data.length; i++) {
+    data[i].addEventListener('click', put_xy);
+}
+
 
 var reset = document.getElementById("resetBtn");
 reset.addEventListener('click',resetgame);
