@@ -5,13 +5,22 @@ var player_x = 1;
 var modal = document.getElementById('simpleModal');
 var message = document.querySelector("#alert");
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', clickOutside);
 // message with current player
 var display = document.querySelector("#currentplayer");
 display.innerHTML = "Good luck!";
 var filledcells = 0;
 var isfinished = false;
+var data = document.getElementsByClassName('cell');
+for (var i = 0; i < data.length; i++) {
+    data[i].addEventListener('click', put_xy);
+}
+var theme = document.getElementById("moon");
+theme.addEventListener('click',changeTheme);
+
+// change theme button
+var theme_name="light";
+var reset = document.getElementById("resetBtn");
+reset.addEventListener('click',resetgame);
 
 
 // functions to close modal
@@ -20,7 +29,7 @@ function closeModal() {
 }
 
 function clickOutside(e) {
-    if(e.target == modal){
+    if (e.target === modal) {
         modal.style.display = 'none';
     }
 }
@@ -29,17 +38,18 @@ function clickOutside(e) {
 // main game function
 function put_xy(event) {
     var x = event.target.id;
-    var square = document.getElementById(x);  
-    if (square.innerHTML != "") return;
-    if (isfinished != false) return;
-        if (player_x == 1) {
+    var square = document.getElementById(x);
+    if (square.innerHTML !== "") {
+        return; }
+    if (isfinished !== false) return;
+        if (player_x === 1) {
             square.classList.remove('playero');
             square.classList.add('playerx');
             square.innerHTML = "X";
             player_x = 0;
             display.innerHTML = "Now it's player O turn";
             filledcells += 1;
-        }
+        } 
         else {
             square.classList.remove('playerx');
             square.classList.add('playero');
@@ -47,34 +57,25 @@ function put_xy(event) {
             player_x = 1;
             display.innerHTML = "It's player X turn";
             filledcells += 1;
-        }   
+        }
     
-        if (endgame("X") == true) {
-            message.innerHTML = "X won!"
+        if (endgame("X") === true) {
+            message.innerHTML = "X won!";
             modal.style.display = 'block';
             isfinished = true;
            
         }
-        else if (endgame("O") == true) {
+        else if (endgame("O") === true) {
             message.innerHTML = "O won!";
             modal.style.display = 'block';
             isfinished = true;
         }
-        else if (endgame("O") == false && endgame("X") == false && filledcells == 9) {
+        else if (endgame("O") === false && endgame("X") === false && filledcells === 9) {
             message.innerHTML = "Oh no! Draw!";
             modal.style.display = 'block';
             isfinished = true;
         }
     }
-
-var data = document.getElementsByClassName('cell');
-for (var i = 0; i < data.length; i++) {
-    data[i].addEventListener('click', put_xy);
-}
-
-
-var reset = document.getElementById("resetBtn");
-reset.addEventListener('click',resetgame);
 
 // reseting board
 function resetgame() {
@@ -88,12 +89,6 @@ function resetgame() {
     isfinished = false;
 }
 
-var theme = document.getElementById("moon");
-theme.addEventListener('click',changeTheme);
-
-
-// change theme button
-var theme_name="light";
 
 function changeTheme() {
     if(theme_name == "light") {
@@ -136,4 +131,6 @@ function endgame(player){
     }
 }
 
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', clickOutside);
 
